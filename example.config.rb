@@ -6,6 +6,6 @@ configatron.prefix = ['<@BOTID> ', '<@!BOTID> ']
 
 configatron.treshold = 1000
 
-configatron.admin_id =
-configatron.tip_bot_id =
-configatron.main_channel_id =
+configatron.admin_id = ''
+configatron.tip_bot_id = ''
+configatron.main_channel_id = ''
