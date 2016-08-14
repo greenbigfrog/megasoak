@@ -42,6 +42,8 @@ $bot.ready do
     if $balance > configatron.treshold
       num = rand(0.1..100)
       if num < 10
+        $bot.channel(configatron.main_channel_id).send_message "Watch out! Your houses are gonna get flooded in a sec! Only real shibes stay and watch out!"
+        sleep(1)
         $bot.channel(configatron.main_channel_id).send_message "!soak #{$balance}"
       end
     end
