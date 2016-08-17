@@ -18,9 +18,14 @@ $bot.command(:megasoak, description: 'Displays info about balance etc.') do |eve
 end
 
 $bot.ready do
+  def gen(number)
+    charset = Array('A'..'Z') + Array('a'..'z')
+    Array.new(number) { charset.sample }.join.to_sym
+  end
+
   def get_balance
     $bot.user(configatron.tip_bot_id).pm '!balance'
-    $bot.user(configatron.tip_bot_id).await(:key) do |e|
+    $bot.user(configatron.tip_bot_id).await(gen(20)) do |e|
       $balance = e.content[/(\d+[,.]\d+)/]
     end
     while $balance.nil?
