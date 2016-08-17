@@ -50,7 +50,7 @@ $bot.ready do
       if num <= 10
         $bot.channel(configatron.main_channel_id).send_message "Watch out! Your houses are gonna get flooded in a sec! Only real shibes stay and watch out!"
         sleep(1)
-        $bot.channel(configatron.main_channel_id).send_message "!soak #{$balance}"
+        $bot.channel(configatron.main_channel_id).send_message "!soak #{$balance.to_i}"
       end
     end
     $balance = nil
