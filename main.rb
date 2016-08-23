@@ -8,7 +8,7 @@ require 'configatron'
 require_relative 'config.rb'
 
 require 'discordrb'
-$bot = Discordrb::Commands::CommandBot.new token: ENV['TOKEN'], type: :user, prefix: configatron.prefix, advanced_functionality: false, debug: true #, log_mode: :debug
+$bot = Discordrb::Commands::CommandBot.new token: ENV['TOKEN'], type: :user, prefix: configatron.prefix, advanced_functionality: false, help_command: false, debug: true #, log_mode: :debug
 
 $bot.command(:megasoak, description: 'Displays info about balance etc.') do |event|
   get_balance
